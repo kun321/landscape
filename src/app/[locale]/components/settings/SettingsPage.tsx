@@ -173,7 +173,7 @@ function SettingsPage({ settingsPageText }: SettingsPageText) {
                 label={settingsPageText.play}
                 hideBg
                 icon={HeadphonesIcon}
-                onClick={playSoundPreview}
+                onClick={() => playSoundPreview()}
               />
             </RadioGroup>
           )}
@@ -195,7 +195,7 @@ function SettingsPage({ settingsPageText }: SettingsPageText) {
                   field.onChange(v);
                   setPreviewVolume(v as number);
                 }}
-                onChangeCommitted={playSoundPreview}
+                onChangeCommitted={() => playSoundPreview()}
               />
             )}
           />
